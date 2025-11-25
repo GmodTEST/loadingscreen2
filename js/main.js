@@ -170,6 +170,50 @@ function loadStaff() {
     staffList.appendChild(item);
   });
 }
+
+function loadTips() {
+  if (!Config.tips || Config.tips.length === 0) return;
+  
+  var tipsList = document.getElementById('tips-list');
+  if (!tipsList) return;
+  
+  // Tüm tipleri oluştur
+  Config.tips.forEach(function(tip, index) {
+    var item = document.createElement('div');
+    item.className = 'tip-item';
+    if (index === 0) item.classList.add('active'); // İlk tip aktif
+    item.textContent = tip;
+    tipsList.appendChild(item);
+  });
+  
+  // Tipsleri rastgele döndür
+  if (Config.tips.length > 1) {
+    var usedIndices = [0]; // İlk gösterilen indexi kaydet
+    
+    setInterval(function() {
+      var tips = document.querySelectorAll('.tip-item');
+      if (tips.length === 0) return;
+      
+      // Mevcut aktif tipi bul ve gizle
+      var currentIndex = -1;
+      tips.forEach(function(tip, i) {
+        if (tip.classList.contains('active')) {
+          tip.classList.remove('active');
+          currentIndex = i;
+        }
+      });
+      
+      // Rastgele yeni tip seç (mevcut hariç)
+      var nextIndex;
+      do {
+        nextIndex = Math.floor(Math.random() * tips.length);
+      } while (nextIndex === currentIndex && tips.length > 1);
+      
+      // Yeni tipi göster
+      tips[nextIndex].classList.add('active');
+    }, 5000); // 5 saniyede bir değişir
+  }
+}
 function setLoad(percentage) {
   debug(percentage + "%");
   $(".overhaul").css("left", percentage + "%");
@@ -199,6 +243,7 @@ $(document).ready(function() {
   // load everything in when ready
   loadBackground();
   loadStaff();
+  loadTips();
 
   // print announcement messages every few seconds
   if (

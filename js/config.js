@@ -80,6 +80,39 @@ Config.staff = [
 ];
 
 /**
+ * Tips list - Bilgiler/İpuçları
+ * Sol tarafta gösterilecek bilgi listesi
+ */
+Config.tips = [
+  "Hufflepuff öğrencileri sabırları ve sadakatleriyle bilinir.",
+  "Ravenclaw öğrencileri meraklıdır ve bilgiyi sınırsız bir hazine olarak görür.",
+  "Gryffindor öğrencileri adaletsizliğe dayanamaz ve cesurca karşı koyar.",
+  "Slytherin öğrencileri uzun vadeli planları ve hırslarıyla öne çıkar.",
+  "Dumbledore tipi büyücüler gücü değil bilgeliği merkezine alır.",
+  "Lord tipi karanlık büyücüler gücün tamamına hükmetmek ister.",
+  "Feniks tüyü çekirdeğine sahip değnekler yüksek potansiyele sahiptir.",
+  "Unicorn kılı çekirdekli değnekler saf niyet ile uyumludur.",
+  "Patronus büyüsünde zorlananlar duygularını saklama eğilimindedir.",
+  "Ev cinleri sadakatle bağlı olduklarında büyük güç sergiler.",
+  "Goblin yapımı eşyalar güçlüdür fakat sahiplik konusunda hassastır.",
+  "Thestral’ları görebilenler ölümü kabullenmiş kişilerdir.",
+  "Büyücü dünyasında bürokrasi yavaştır ama beklenenden etkilidir.",
+  "Sihirli yaratıklarla anlaşabilenler yüksek empatiye sahiptir.",
+  "Azkaban benzeri yerler büyücülerin umutlarını emer.",
+  "Bakanlık kayıtları her büyücünün istemeden bıraktığı izlerle doludur.",
+  "Karanlık sanatlara meraklı olanlar gücün bedeli olduğunu bilir.",
+  "İksir ustaları sabır ve hassasiyetle çalışan ince işçilerdir.",
+  "Uçan süpürge ustaları sihri mühendislikle birleştiren zanaatkârlardır.",
+  "Anı havuzunu kullananlar geçmişin ağırlığını dışarı akıtmayı bilir.",
+  "Sihirsel dilleri konuşabilenler dünyayı insan merkezli görmez.",
+  "Koruyucu büyü ustaları savunmayı saldırıdan üstün tutar.",
+  "Büyülü kitaplara ilgi duyanlar içindeki tehlikeyi bilse de okumaktan vazgeçmez.",
+  "Sihirsel mühürlerle çalışanlar enerjiyi noktasal olarak kilitleme ustalığına sahiptir.",
+  "Büyük Sihirli Sırlar’ın peşine düşenler ya tarihe kazınır ya da tamamen kaybolur."
+];
+
+
+/**
  * Enable debug messages?
  */
 Config.enableDebug = false;

@@ -6,6 +6,9 @@ var totalFiles = 50;
 var totalCalled = false;
 var downloadingFileCalled = false;
 var percentage = 0;
+// Slideshow kontrol değişkenleri
+var slideTimer = null;
+var slideStarted = false;
 
 /**
  * Gmod Called functions
@@ -223,4 +226,5 @@ $(document).ready(function() {
       SetStatusChanged("Testing..");
     }
   }, 1000);
+
 });

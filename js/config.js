@@ -31,7 +31,10 @@ Config.announceMessages = [
   "ALT+E ile oturabilirsiniz!",
   "Kuralları okumayı unutmayın",
   "Discord sunucumuzdaki tuş atamaları odasına bakmayı unutmayın!",
-  "31 çekmeyi unutmayın!"
+  "Eğlenmeyi ihmal etmeyin!",
+  "Küfür yasak!",
+  "Profesörleriniz hocalarınız değildir.",
+  "Baykuşlar, sizi bulamadıklarında mektupları rastgele yerlere bırakırlar."
 ];
 
 /**
@@ -65,10 +68,10 @@ Config.staff = [
  { rank: "LEGACY", name: "Muzisyenes" },
  { rank: "Sunucu Yönetimi", name: "Aren" },
  { rank: "Sunucu Yönetimi", name: "wAve" },
- { rank: "Yetkili Sorumlusu", name: "trinky" },
+ { rank: "Yetkili Sorumlusu", name: "codibaba1numara" },
  { rank: "Admin", name: "InFlames" },
- { rank: "Admin", name: "kaanclnt" },
- { rank: "Admin", name: "1moonlover" },
+ { rank: "Admin", name: "Keegan" },
+ { rank: "Admin", name: "pirasa" },
  { rank: "Admin", name: "Orpheus" },
  { rank: "Kıdemli Moderatör", name: "Raft" },
  { rank: "Kıdemli Moderatör", name: "Integra" },
@@ -116,4 +119,5 @@ Config.tips = [
 /**
  * Enable debug messages?
  */
+
 Config.enableDebug = false;

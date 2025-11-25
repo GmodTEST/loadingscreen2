@@ -52,9 +52,10 @@ Config.backgrounds = [
   "default3.jpg"
 ];
 // Kaç saniyede bir arka plan değişsin?
-Config.backgroundInterval = 10; // saniye
+Config.backgroundInterval = 1; // saniye
 
 /**
  * Enable debug messages?
  */
+
 Config.enableDebug = false;

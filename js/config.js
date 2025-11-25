@@ -40,23 +40,20 @@ Config.announceMessages = [
 Config.announcementLength = 3000;
 
 /**
- * Image Filename
- * DROP IMAGE IN "images" FOLDER
+ * Background Images - Slideshow
+ * DROP IMAGES IN "images" FOLDER
+ * Görseller buraya eklenen sırayla döner.
  */
 Config.backgrounds = [
-  // images klasöründeki dosya adlarını buraya ekleyin.
   "default1.jpg",
   "default4.jpg",
   "default2.jpg",
   "default3.jpg"
 ];
 // Kaç saniyede bir arka plan değişsin?
-Config.backgroundInterval = 1; // saniye
+Config.backgroundInterval = 5; // saniye
 
 /**
  * Enable debug messages?
  */
-
 Config.enableDebug = false;
-
-

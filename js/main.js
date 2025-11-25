@@ -1,4 +1,4 @@
-"use sctrict";
+"use strict";
 
 var isGmod = false;
 var isTest = false;
@@ -6,9 +6,6 @@ var totalFiles = 50;
 var totalCalled = false;
 var downloadingFileCalled = false;
 var percentage = 0;
-// Slideshow kontrol değişkenleri
-var slideTimer = null;
-var slideStarted = false;
 
 /**
  * Gmod Called functions
@@ -121,31 +118,35 @@ function loadAll() {
   }, 10000);
 }
 function loadBackground() {
-  // Eski tek görsel yöntemi
-  if (Config.backgroundImage) {
-    $(".background").css(
-      "background-image",
-      'url("images/' + Config.backgroundImage + '")'
-    );
-  }
-  // Çoklu arka plan döndürme
-  if (Config.backgrounds && Config.backgrounds.length > 0) {
-    // Slayt divlerini oluştur
-    Config.backgrounds.forEach(function(file, idx) {
-      var div = document.createElement('div');
-      div.className = 'bg-slide' + (idx === 0 ? ' active':'');
-      div.style.backgroundImage = 'url("images/' + file + '")';
-      document.body.appendChild(div);
-    });
-    if (Config.backgrounds.length > 1) {
-      var current = 0;
-      setInterval(function() {
-        var slides = document.querySelectorAll('.bg-slide');
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-      }, (Config.backgroundInterval || 5) * 1000);
-    }
+  if (!Config.backgrounds || Config.backgrounds.length === 0) return;
+  
+  // Her görsel için bir div oluştur
+  Config.backgrounds.forEach(function(filename, index) {
+    var slide = document.createElement('div');
+    slide.className = 'bg-slide';
+    slide.style.backgroundImage = 'url("images/' + filename + '")';
+    if (index === 0) slide.classList.add('active'); // İlk görseli aktif et
+    document.body.insertBefore(slide, document.body.firstChild);
+  });
+
+  // Birden fazla görsel varsa döngüyü başlat
+  if (Config.backgrounds.length > 1) {
+    var currentIndex = 0;
+    var intervalMs = (Config.backgroundInterval || 5) * 1000;
+    
+    setInterval(function() {
+      var slides = document.querySelectorAll('.bg-slide');
+      if (slides.length === 0) return;
+      
+      // Mevcut görseli pasif yap
+      slides[currentIndex].classList.remove('active');
+      
+      // Sonraki index'e geç
+      currentIndex = (currentIndex + 1) % slides.length;
+      
+      // Yeni görseli aktif et
+      slides[currentIndex].classList.add('active');
+    }, intervalMs);
   }
 }
 function setLoad(percentage) {
@@ -226,5 +227,4 @@ $(document).ready(function() {
       SetStatusChanged("Testing..");
     }
   }, 1000);
-
 });

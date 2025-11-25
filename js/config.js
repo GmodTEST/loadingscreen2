@@ -46,8 +46,8 @@ Config.announcementLength = 3000;
 Config.backgroundImage = ""; // Eski yöntem (tek görsel)
 Config.backgrounds = [
   // images klasöründeki dosya adlarını buraya ekleyin.
-    "default1.jpg",
-  "default.jpg",
+  "default1.jpg",
+  "default4.jpg",
   "default2.jpg",
   "default3.jpg"
 ];
@@ -59,3 +59,4 @@ Config.backgroundInterval = 1; // saniye
  */
 
 Config.enableDebug = false;
+

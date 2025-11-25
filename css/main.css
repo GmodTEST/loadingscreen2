@@ -100,7 +100,7 @@ h1 {
 
 #staff-panel {
   position: fixed;
-  top: 36px;
+  top: 51px;
   right: 12px;
   background: rgba(0, 0, 0, 0.7);
   padding: 8px;
@@ -124,14 +124,14 @@ h1 {
   border-left: 2px solid #6da9ff;
 }
 .staff-rank {
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.2px;
   line-height: 1.1;
 }
 .staff-name {
-  font-size: 0.84em;
+  font-size: 0.95em;
   color: #fff;
   margin-top: 1px;
   line-height: 1.1;

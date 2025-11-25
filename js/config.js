@@ -31,6 +31,7 @@ Config.announceMessages = [
   "ALT+E ile oturabilirsiniz!",
   "Kuralları okumayı unutmayın",
   "Discord sunucumuzdaki tuş atamaları odasına bakmayı unutmayın!",
+  "31 çekmeyi unutmayın!"
 ];
 
 /**

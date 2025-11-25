@@ -106,16 +106,6 @@ function loadAll() {
   $("nav").fadeIn();
   $("main").fadeIn();
 
-  // first time loading if DownloadingFile isn't called after some time
-  setTimeout(function() {
-    debug("Checking if first time loading.. " + downloadingFileCalled);
-    if (downloadingFileCalled) {
-      announce(
-        "Dosyalar indiriliyor... Lütfen bekleyin.",
-        true
-      );
-    }
-  }, 10000);
 }
 function loadBackground() {
   if (!Config.backgrounds || Config.backgrounds.length === 0) return;

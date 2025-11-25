@@ -43,7 +43,6 @@ Config.announcementLength = 3000;
  * Image Filename
  * DROP IMAGE IN "images" FOLDER
  */
-Config.backgroundImage = ""; // Eski yöntem (tek görsel)
 Config.backgrounds = [
   // images klasöründeki dosya adlarını buraya ekleyin.
   "default1.jpg",
@@ -59,4 +58,5 @@ Config.backgroundInterval = 1; // saniye
  */
 
 Config.enableDebug = false;
+
 

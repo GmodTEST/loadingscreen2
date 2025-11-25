@@ -134,7 +134,7 @@ function loadBackground() {
     var currentIndex = 0;
     var intervalMs = (Config.backgroundInterval || 5) * 1000;
     
-    setInterval(function() {
+    var advanceSlide = function() {
       var slides = document.querySelectorAll('.bg-slide');
       if (slides.length === 0) return;
       
@@ -146,8 +146,29 @@ function loadBackground() {
       
       // Yeni görseli aktif et
       slides[currentIndex].classList.add('active');
-    }, intervalMs);
+    };
+    
+    // İlk geçişi hemen yap
+    setTimeout(advanceSlide, intervalMs);
+    // Sonrasında normal döngüyü başlat
+    setInterval(advanceSlide, intervalMs);
   }
+}
+
+function loadStaff() {
+  if (!Config.staff || Config.staff.length === 0) return;
+  
+  var staffList = document.getElementById('staff-list');
+  if (!staffList) return;
+  
+  Config.staff.forEach(function(staff) {
+    var item = document.createElement('div');
+    item.className = 'staff-item';
+    item.setAttribute('data-rank', staff.rank);
+    item.innerHTML = '<div class="staff-rank">' + staff.rank + '</div>' +
+                     '<div class="staff-name">' + staff.name + '</div>';
+    staffList.appendChild(item);
+  });
 }
 function setLoad(percentage) {
   debug(percentage + "%");
@@ -177,6 +198,7 @@ function debug(message) {
 $(document).ready(function() {
   // load everything in when ready
   loadBackground();
+  loadStaff();
 
   // print announcement messages every few seconds
   if (

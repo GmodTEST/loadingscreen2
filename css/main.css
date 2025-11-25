@@ -59,6 +59,64 @@ h1 {
 #discord-link a { color: #6da9ff; text-decoration: none; }
 #discord-link a:hover { text-decoration: underline; }
 
+#staff-panel {
+  position: fixed;
+  top: 36px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 5px;
+  width: 170px;
+  z-index: 10;
+}
+#staff-panel h3 {
+  margin: 0 0 6px 0;
+  font-size: 0.95em;
+  color: #fff;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
+}
+.staff-item {
+  margin: 3px 0;
+  padding: 3px 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  border-left: 2px solid #6da9ff;
+}
+.staff-rank {
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+}
+.staff-name {
+  font-size: 0.84em;
+  color: #fff;
+  margin-top: 1px;
+  line-height: 1.1;
+}
+
+/* Rank renkleri */
+.staff-item[data-rank="LEGACY"] { border-left-color: #ff4757; }
+.staff-item[data-rank="LEGACY"] .staff-rank { color: #ff4757; }
+
+.staff-item[data-rank="Sunucu Yönetimi"] { border-left-color: #ffa502; }
+.staff-item[data-rank="Sunucu Yönetimi"] .staff-rank { color: #ffa502; }
+
+.staff-item[data-rank="Yetkili Sorumlusu"] { border-left-color: #ff6348; }
+.staff-item[data-rank="Yetkili Sorumlusu"] .staff-rank { color: #ff6348; }
+
+.staff-item[data-rank="Admin"] { border-left-color: #1e90ff; }
+.staff-item[data-rank="Admin"] .staff-rank { color: #1e90ff; }
+
+.staff-item[data-rank="Kıdemli Moderatör"] { border-left-color: #2ed573; }
+.staff-item[data-rank="Kıdemli Moderatör"] .staff-rank { color: #2ed573; }
+
+.staff-item[data-rank="Moderatör"] { border-left-color: #5f27cd; }
+.staff-item[data-rank="Moderatör"] .staff-rank { color: #5f27cd; }
+
 /* Slideshow katmanları - JS ile dinamik oluşturulur */
 .bg-slide {
   position: fixed;

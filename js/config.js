@@ -95,27 +95,34 @@ Config.tips = [
   "Ravenclaw öğrencileri meraklıdır ve bilgiyi sınırsız bir hazine olarak görür.",
   "Gryffindor öğrencileri adaletsizliğe dayanamaz ve cesurca karşı koyar.",
   "Slytherin öğrencileri uzun vadeli planları ve hırslarıyla öne çıkar.",
-  "Dumbledore tipi büyücüler gücü değil bilgeliği merkezine alır.",
-  "Lord tipi karanlık büyücüler gücün tamamına hükmetmek ister.",
+  "Dumbledore gibi büyücüler bilgeliği güçten üstün görür.",
+  "Voldemort gibi karanlık büyücüler gücün tamamına hükmetmek ister.",
   "Feniks tüyü çekirdeğine sahip değnekler yüksek potansiyele sahiptir.",
   "Unicorn kılı çekirdekli değnekler saf niyet ile uyumludur.",
   "Patronus büyüsünde zorlananlar duygularını saklama eğilimindedir.",
+  "Gerçekte kim olduğumuzu gösteren şey yeteneklerimiz değil, seçimlerimizdir.",
   "Ev cinleri sadakatle bağlı olduklarında büyük güç sergiler.",
-  "Goblin yapımı eşyalar güçlüdür fakat sahiplik konusunda hassastır.",
-  "Thestral’ları görebilenler ölümü kabullenmiş kişilerdir.",
+  "Tablolar bazen istemediğiniz bilgiler taşıyabilir.",
+  "Cüce yapımı eşyalar güçlüdür fakat sahiplik konusunda hassastır.",
+  "Karanlık orman sayısız tehlikelerle doludur.",
+  "Thestralleri görebilenler ölümle en az bir kere karşılaşmış kişilerdir.",
   "Büyücü dünyasında bürokrasi yavaştır ama beklenenden etkilidir.",
+  "Yeni büyülerde tamamen ustalaşabilemk doğru eğitim ve pratik gerektirir.",
   "Sihirli yaratıklarla anlaşabilenler yüksek empatiye sahiptir.",
   "Azkaban benzeri yerler büyücülerin umutlarını emer.",
+  "Hedefimiz aynı olduğu sürece konuştuğumuz dil veya büyüdüğümüz yer önemli değildir.",
   "Bakanlık kayıtları her büyücünün istemeden bıraktığı izlerle doludur.",
   "Karanlık sanatlara meraklı olanlar gücün bedeli olduğunu bilir.",
-  "İksir ustaları sabır ve hassasiyetle çalışan ince işçilerdir.",
-  "Uçan süpürge ustaları sihri mühendislikle birleştiren zanaatkârlardır.",
-  "Anı havuzunu kullananlar geçmişin ağırlığını dışarı akıtmayı bilir.",
-  "Sihirsel dilleri konuşabilenler dünyayı insan merkezli görmez.",
-  "Koruyucu büyü ustaları savunmayı saldırıdan üstün tutar.",
-  "Büyülü kitaplara ilgi duyanlar içindeki tehlikeyi bilse de okumaktan vazgeçmez.",
-  "Sihirsel mühürlerle çalışanlar enerjiyi noktasal olarak kilitleme ustalığına sahiptir.",
-  "Büyük Sihirli Sırlar’ın peşine düşenler ya tarihe kazınır ya da tamamen kaybolur."
+  "İksir ustaları sabır ve hassasiyetle çalışır.",
+  "Ölülere değil, yaşayanlara acıyın. Her şeyden önce sevgisiz yaşayanlara..",
+  "Uçan süpürge üreticileri büyük paralar kazanmakatdır.",
+  "Merak günah değildir, onların peşinden koşabiliriz. Ancak her ihtimale karşı dikkatli olmakta fayda var..",
+  "Büyücülük evreninde bir zihnibend veya zihnifend konusunda yetekenkli büyücülere rastlamak pek yaygın bir durum değildir.",
+  "Tılsım ustaları ustaları savunmayı saldırıdan üstün tutar.",
+  "Yasaklı kitaplara ilgi duyanlar içindeki tehlikeyi bilse de okumaktan vazgeçmez.",
+  "Lanetler kişinin duygularından beslenir.",
+  "İlk defa cisimlenen kişiler kısa süreli mide bulantısı ve baş dönmesi yaşayabilir.",
+  "Büyülü gizemlerin peşine düşenler ya tarihe kazınır ya da tamamen kaybolur."
 ];
 
 
@@ -124,5 +131,6 @@ Config.tips = [
  */
 
 Config.enableDebug = false;
+
 
 

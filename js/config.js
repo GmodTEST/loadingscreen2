@@ -31,17 +31,17 @@ Config.announceMessages = [
   "ALT+E ile oturabilirsiniz!",
   "Kuralları okumayı unutmayın",
   "Discord sunucumuzdaki tuş atamaları odasına bakmayı unutmayın!",
-  "RDM: Sebebi ve amacı olmadan kimseyi öldürme!"
-  "RDA: Sşş profesör hiç bir öğrenciyi sebepsiz disipline gönderme!"
-  "FailRP: Hey hey hatalı rol yapma sakın!"
-  "FearRP: Zamanı geldiği zaman korkmayı da bilmemiz lazım :)"
-  "Meta Gaming: Oyunda duymadığın bilgi bilgi değildir. Kimse ile paylaşma."
-  "Power Gaming: Hadi ama o kadar da güçlü değilsin. Gerçekten yapamıyorsan bunu yapma!"
-  "LTAP: Sana ceza verilecekse kaçmamalısın. Bu adamlar boş yere profesör olmadı ya?"
-  "MadRP: Sakin ol sen Bellatrix değilsin deli rolü yapamazsın..."
-  "RefuseRP: Madem rol yapmayacaksın neden sunucudasın reddetmek için mi?"
-  "ForceRP: Ne bu emrivaki zorlama kimseyi yaptığın çok ayıp."
-  "RetartedRP: Tamam büyücülük evrenindeyiz de o kadar da değil sence bu mantıklı mı?"
+  "RDM: Sebebi ve amacı olmadan kimseyi öldürme!",
+  "RDA: Sşş profesör hiç bir öğrenciyi sebepsiz disipline gönderme!",
+  "FailRP: Hey hey hatalı rol yapma sakın!",
+  "FearRP: Zamanı geldiği zaman korkmayı da bilmemiz lazım :)",
+  "Meta Gaming: Oyunda duymadığın bilgi bilgi değildir. Kimse ile paylaşma.",
+  "Power Gaming: Hadi ama o kadar da güçlü değilsin. Gerçekten yapamıyorsan bunu yapma!",
+  "LTAP: Sana ceza verilecekse kaçmamalısın. Bu adamlar boş yere profesör olmadı ya?",
+  "MadRP: Sakin ol sen Bellatrix değilsin deli rolü yapamazsın...",
+  "RefuseRP: Madem rol yapmayacaksın neden sunucudasın reddetmek için mi?",
+  "ForceRP: Ne bu emrivaki zorlama kimseyi yaptığın çok ayıp.",
+  "RetartedRP: Tamam büyücülük evrenindeyiz de o kadar da değil sence bu mantıklı mı?",
   "Profesörleriniz hocalarınız değildir.",
   "Baykuşlar, sizi bulamadıklarında mektupları rastgele yerlere bırakırlar."
 ];
@@ -142,7 +142,3 @@ Config.tips = [
  */
 
 Config.enableDebug = false;
-
-
-
-

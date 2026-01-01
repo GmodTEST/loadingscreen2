@@ -31,8 +31,17 @@ Config.announceMessages = [
   "ALT+E ile oturabilirsiniz!",
   "Kuralları okumayı unutmayın",
   "Discord sunucumuzdaki tuş atamaları odasına bakmayı unutmayın!",
-  "Eğlenmeyi ihmal etmeyin!",
-  "Küfür yasak!",
+  "RDM: Sebebi ve amacı olmadan kimseyi öldürme!"
+  "RDA: Sşş profesör hiç bir öğrenciyi sebepsiz disipline gönderme!"
+  "FailRP: Hey hey hatalı rol yapma sakın!"
+  "FearRP: Zamanı geldiği zaman korkmayı da bilmemiz lazım :)"
+  "Meta Gaming: Oyunda duymadığın bilgi bilgi değildir. Kimse ile paylaşma."
+  "Power Gaming: Hadi ama o kadar da güçlü değilsin. Gerçekten yapamıyorsan bunu yapma!"
+  "LTAP: Sana ceza verilecekse kaçmamalısın. Bu adamlar boş yere profesör olmadı ya?"
+  "MadRP: Sakin ol sen Bellatrix değilsin deli rolü yapamazsın..."
+  "RefuseRP: Madem rol yapmayacaksın neden sunucudasın reddetmek için mi?"
+  "ForceRP: Ne bu emrivaki zorlama kimseyi yaptığın çok ayıp."
+  "RetartedRP: Tamam büyücülük evrenindeyiz de o kadar da değil sence bu mantıklı mı?"
   "Profesörleriniz hocalarınız değildir.",
   "Baykuşlar, sizi bulamadıklarında mektupları rastgele yerlere bırakırlar."
 ];
@@ -91,16 +100,18 @@ Config.staff = [
  * Sol tarafta gösterilecek bilgi listesi
  */
 Config.tips = [
-  "Hufflepuff öğrencileri sabırları ve sadakatleriyle bilinir.",
-  "Ravenclaw öğrencileri meraklıdır ve bilgiyi sınırsız bir hazine olarak görür.",
-  "Gryffindor öğrencileri adaletsizliğe dayanamaz ve cesurca karşı koyar.",
-  "Slytherin öğrencileri uzun vadeli planları ve hırslarıyla öne çıkar.",
-  "Dumbledore gibi büyücüler bilgeliği güçten üstün görür.",
-  "Voldemort gibi karanlık büyücüler gücün tamamına hükmetmek ister.",
-  "Feniks tüyü çekirdeğine sahip değnekler yüksek potansiyele sahiptir.",
-  "Unicorn kılı çekirdekli değnekler saf niyet ile uyumludur.",
-  "Patronus büyüsünde zorlananlar duygularını saklama eğilimindedir.",
-  "Gerçekte kim olduğumuzu gösteren şey yeteneklerimiz değil, seçimlerimizdir.",
+  "Gryffindor: cesaret ve fedakârlığı her şeyin önünde tutar. Seçme şapkası kalbin gücüne bakar.",
+  "Slytherin: Hırs zeka ve stratejiyle öne çıkar. Birçok karanlık büyücü bu haneden çıkmıştır.",
+  "Ravenclaw: Bilgiye ve yaratıcılığa değer verir. Doğru cevap kadar doğru soruyu da önemser.",
+  "Hufflepuff: Sadakat ve çalışkanlığı temsil eder. En kapsayıcı hanedir.",
+  "Albus Dumbledore Hogwarts’ın en bilge müdürlerinden biri olarak anılır.",
+  "Profesörler sadece ders vermez; öğrencileri karanlık tehditlere karşı da korur.",
+  "Ölüm Yiyenler, safkan büyücü üstünlüğünü savunan karanlık bir örgüttür.",
+  "Ölüm Yiyenler genellikle Morsmordre ile tanınır; bu işaret Voldemort’un çağrısıdır.",
+  "Seherbazlar, büyücülük dünyasının en tehlikeli suçlularını avlar.",
+  "Seherbaz olmak için ileri seviye büyü bilgisi ve psikolojik dayanıklılık gerekir.",
+  "Büyük Britanya Büyü Bakanlığı, Britanya’daki tüm büyülü toplumu yöneten en yüksek otoritedir.",
+  "Bakan, toplumun güvenliğinden ve politik kararlarından sorumludur.",
   "Ev cinleri sadakatle bağlı olduklarında büyük güç sergiler.",
   "Tablolar bazen istemediğiniz bilgiler taşıyabilir.",
   "Cüce yapımı eşyalar güçlüdür fakat sahiplik konusunda hassastır.",
@@ -131,6 +142,7 @@ Config.tips = [
  */
 
 Config.enableDebug = false;
+
 
 
 

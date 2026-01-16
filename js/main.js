@@ -65,7 +65,7 @@ function DownloadingFile(filename) {
   debug("DownloadingFile called '" + filename + "'");
   downloadingFileCalled = true;
   $("#history").prepend('<div class="history-item">' + filename + "</div>");
-  $(".history-item").each(function(i, el) {
+  $(".history-item").each(function (i, el) {
     if (i > 10) {
       $(el).remove();
     }
@@ -77,7 +77,7 @@ var allow_increment = true;
 function SetStatusChanged(status) {
   debug("SetStatusChanged called '" + status + "'");
   $("#history").prepend('<div class="history-item">' + status + "</div>");
-  $(".history-item").each(function(i, el) {
+  $(".history-item").each(function (i, el) {
     if (i > 10) {
       $(el).remove();
     }
@@ -109,9 +109,9 @@ function loadAll() {
 }
 function loadBackground() {
   if (!Config.backgrounds || Config.backgrounds.length === 0) return;
-  
+
   // Her görsel için bir div oluştur
-  Config.backgrounds.forEach(function(filename, index) {
+  Config.backgrounds.forEach(function (filename, index) {
     var slide = document.createElement('div');
     slide.className = 'bg-slide';
     slide.style.backgroundImage = 'url("images/' + filename + '")';
@@ -123,21 +123,21 @@ function loadBackground() {
   if (Config.backgrounds.length > 1) {
     var currentIndex = 0;
     var intervalMs = (Config.backgroundInterval || 5) * 1000;
-    
-    var advanceSlide = function() {
+
+    var advanceSlide = function () {
       var slides = document.querySelectorAll('.bg-slide');
       if (slides.length === 0) return;
-      
+
       // Mevcut görseli pasif yap
       slides[currentIndex].classList.remove('active');
-      
+
       // Sonraki index'e geç
       currentIndex = (currentIndex + 1) % slides.length;
-      
+
       // Yeni görseli aktif et
       slides[currentIndex].classList.add('active');
     };
-    
+
     // İlk geçişi hemen yap
     setTimeout(advanceSlide, intervalMs);
     // Sonrasında normal döngüyü başlat
@@ -147,63 +147,93 @@ function loadBackground() {
 
 function loadStaff() {
   if (!Config.staff || Config.staff.length === 0) return;
-  
+
   var staffList = document.getElementById('staff-list');
   if (!staffList) return;
-  
-  Config.staff.forEach(function(staff) {
+
+  Config.staff.forEach(function (staff) {
     var item = document.createElement('div');
     item.className = 'staff-item';
     item.setAttribute('data-rank', staff.rank);
     item.innerHTML = '<div class="staff-rank">' + staff.rank + '</div>' +
-                     '<div class="staff-name">' + staff.name + '</div>';
+      '<div class="staff-name">' + staff.name + '</div>';
     staffList.appendChild(item);
   });
 }
 
 function loadTips() {
   if (!Config.tips || Config.tips.length === 0) return;
-  
+
   var tipsList = document.getElementById('tips-list');
   if (!tipsList) return;
-  
+
   // Tüm tipleri oluştur
-  Config.tips.forEach(function(tip, index) {
+  Config.tips.forEach(function (tip, index) {
     var item = document.createElement('div');
     item.className = 'tip-item';
     if (index === 0) item.classList.add('active'); // İlk tip aktif
     item.textContent = tip;
     tipsList.appendChild(item);
   });
-  
+
   // Tipsleri rastgele döndür
   if (Config.tips.length > 1) {
     var usedIndices = [0]; // İlk gösterilen indexi kaydet
-    
-    setInterval(function() {
+
+    setInterval(function () {
       var tips = document.querySelectorAll('.tip-item');
       if (tips.length === 0) return;
-      
+
       // Mevcut aktif tipi bul ve gizle
       var currentIndex = -1;
-      tips.forEach(function(tip, i) {
+      tips.forEach(function (tip, i) {
         if (tip.classList.contains('active')) {
           tip.classList.remove('active');
           currentIndex = i;
         }
       });
-      
+
       // Rastgele yeni tip seç (mevcut hariç)
       var nextIndex;
       do {
         nextIndex = Math.floor(Math.random() * tips.length);
       } while (nextIndex === currentIndex && tips.length > 1);
-      
+
       // Yeni tipi göster
       tips[nextIndex].classList.add('active');
     }, 5000); // 5 saniyede bir değişir
   }
 }
+
+function loadMusic() {
+  if (!Config.musicPlaylist || Config.musicPlaylist.length === 0) return;
+
+  var musicFile = Config.musicPlaylist[Math.floor(Math.random() * Config.musicPlaylist.length)];
+  var audio = new Audio("media/" + musicFile);
+  audio.volume = Config.musicVolume || 0.2;
+  audio.loop = true;
+
+  // Browsers usually block autoplay. We try to play, and if it fails, we wait for a click.
+  var playPromise = audio.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(function () {
+      // Automatic playback started!
+    }).catch(function (error) {
+      // Automatic playback failed.
+      console.log("Autoplay blocked. Waiting for user interaction.");
+      $(document).one('click', function () {
+        audio.play();
+      });
+      $(document).one('keydown', function () {
+        audio.play();
+      });
+    });
+  }
+
+}
+
+
 function setLoad(percentage) {
   debug(percentage + "%");
   $(".overhaul").css("left", percentage + "%");
@@ -229,11 +259,12 @@ function debug(message) {
 /**
  * Initial function
  */
-$(document).ready(function() {
+$(document).ready(function () {
   // load everything in when ready
   loadBackground();
   loadStaff();
   loadTips();
+  loadMusic();
 
   // print announcement messages every few seconds
   if (
@@ -243,7 +274,7 @@ $(document).ready(function() {
   ) {
     if (Config.announceMessages.length > 0) {
       var i = 0;
-      setInterval(function() {
+      setInterval(function () {
         announce(Config.announceMessages[i]);
         i++;
         if (i > Config.announceMessages.length - 1) {
@@ -254,7 +285,7 @@ $(document).ready(function() {
   }
 
   // if it isn't loaded by gmod load manually
-  setTimeout(function() {
+  setTimeout(function () {
     if (!isGmod) {
       debug("No Garry's mod testing..");
       isTest = true;
@@ -273,7 +304,7 @@ $(document).ready(function() {
       SetFilesTotal(totalTestFiles);
 
       var needed = totalTestFiles;
-      setInterval(function() {
+      setInterval(function () {
         if (needed > 0) {
           needed = needed - 1;
           SetFilesNeeded(needed);

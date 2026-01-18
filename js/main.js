@@ -213,14 +213,16 @@ function loadMusic() {
   audio.volume = Config.musicVolume || 0.2;
   audio.loop = true;
 
-  // Music Toggle Button
-  $("#music-control").click(function (e) {
+  // Pause music when Alt-Tabbed (Safe way to mute)
+  window.addEventListener('blur', function () {
+    if (!audio.paused) {
+      audio.pause();
+    }
+  });
+
+  window.addEventListener('focus', function () {
     if (audio.paused) {
       audio.play();
-      $(this).html("🔊 Müzik: Açık");
-    } else {
-      audio.pause();
-      $(this).html("🔇 Müzik: Kapalı");
     }
   });
 

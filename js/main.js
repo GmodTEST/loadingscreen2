@@ -213,16 +213,17 @@ function loadMusic() {
   audio.volume = Config.musicVolume || 0.2;
   audio.loop = true;
 
-  // Music Toggle Button logic
-  $("#music-control").click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (audio.paused) {
-      audio.play();
-      $(this).text("🔊 Müzik: Açık");
-    } else {
-      audio.pause();
-      $(this).text("🔇 Müzik: Kapalı");
+  // 'M' key to toggle music
+  $(document).on('keydown', function (e) {
+    if (e.code === 'KeyM' || e.keyCode === 77) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
     }
   });
 

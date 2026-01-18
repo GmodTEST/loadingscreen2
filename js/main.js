@@ -213,9 +213,11 @@ function loadMusic() {
   audio.volume = Config.musicVolume || 0.2;
   audio.loop = true;
 
-  // Spacebar to toggle music
+  // 'M' key to toggle music
   $(document).on('keydown', function (e) {
-    if (e.code === 'Space' || e.keyCode === 32) {
+    if (e.code === 'KeyM' || e.keyCode === 77) {
+      e.preventDefault();
+      e.stopPropagation();
       if (audio.paused) {
         audio.play();
       } else {
@@ -328,4 +330,5 @@ $(document).ready(function () {
       SetStatusChanged("Testing..");
     }
   }, 1000);
+
 });

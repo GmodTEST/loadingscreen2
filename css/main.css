@@ -272,3 +272,23 @@ h1 {
   height: 15%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+#music-control {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+#music-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 255, 255, 0.5);
+}

@@ -15,27 +15,33 @@ nav {
   padding: 1%;
   overflow: auto;
 }
+
 h2 {
   font-size: 1.5em;
   color: rgb(250, 250, 250);
   margin: 0;
 }
+
 h1 {
   margin-top: 10px;
 }
+
 #title,
 #map,
 #steamid {
   display: none;
 }
+
 #steamid {
   float: right;
 }
+
 #announcement {
   position: absolute;
   width: 98%;
   text-align: center;
 }
+
 #history {
   position: absolute;
   text-align: center;
@@ -43,12 +49,13 @@ h1 {
   color: rgb(240, 240, 240);
   text-shadow: none;
 }
+
 #discord-link {
   position: fixed;
   top: 6px;
   left: 8px;
   font-size: 13px;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   padding: 4px 10px;
   border-radius: 6px;
   font-family: "Ubuntu Mono", monospace;
@@ -56,8 +63,15 @@ h1 {
   z-index: 10;
   pointer-events: auto;
 }
-#discord-link a { color: #6da9ff; text-decoration: none; }
-#discord-link a:hover { text-decoration: underline; }
+
+#discord-link a {
+  color: #6da9ff;
+  text-decoration: none;
+}
+
+#discord-link a:hover {
+  text-decoration: underline;
+}
 
 #tips-panel {
   position: fixed;
@@ -74,6 +88,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
 }
+
 #tips-panel h3 {
   margin: 0 0 15px 0;
   font-size: 0.95em;
@@ -83,6 +98,7 @@ h1 {
   padding-bottom: 8px;
   letter-spacing: 2px;
 }
+
 .tip-item {
   padding: 10px 12px;
   background: rgba(255, 255, 255, 0.08);
@@ -94,6 +110,7 @@ h1 {
   text-align: center;
   display: none;
 }
+
 .tip-item.active {
   display: block;
 }
@@ -108,6 +125,7 @@ h1 {
   width: 170px;
   z-index: 10;
 }
+
 #staff-panel h3 {
   margin: 0 0 6px 0;
   font-size: 0.95em;
@@ -116,6 +134,7 @@ h1 {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 4px;
 }
+
 .staff-item {
   margin: 3px 0;
   padding: 3px 5px;
@@ -123,6 +142,7 @@ h1 {
   border-radius: 3px;
   border-left: 2px solid #6da9ff;
 }
+
 .staff-rank {
   font-size: 0.9em;
   font-weight: bold;
@@ -130,6 +150,7 @@ h1 {
   letter-spacing: 0.2px;
   line-height: 1.1;
 }
+
 .staff-name {
   font-size: 0.95em;
   color: #fff;
@@ -138,23 +159,53 @@ h1 {
 }
 
 /* Rank renkleri */
-.staff-item[data-rank="LEGACY"] { border-left-color: #ff4757; }
-.staff-item[data-rank="LEGACY"] .staff-rank { color: #ff4757; }
+.staff-item[data-rank="LEGACY"] {
+  border-left-color: #ff4757;
+}
 
-.staff-item[data-rank="Sunucu Yönetimi"] { border-left-color: #ffa502; }
-.staff-item[data-rank="Sunucu Yönetimi"] .staff-rank { color: #ffa502; }
+.staff-item[data-rank="LEGACY"] .staff-rank {
+  color: #ff4757;
+}
 
-.staff-item[data-rank="Yetkili Sorumlusu"] { border-left-color: #ff6348; }
-.staff-item[data-rank="Yetkili Sorumlusu"] .staff-rank { color: #ff6348; }
+.staff-item[data-rank="Sunucu Yönetimi"] {
+  border-left-color: #ffa502;
+}
 
-.staff-item[data-rank="Admin"] { border-left-color: #1e90ff; }
-.staff-item[data-rank="Admin"] .staff-rank { color: #1e90ff; }
+.staff-item[data-rank="Sunucu Yönetimi"] .staff-rank {
+  color: #ffa502;
+}
 
-.staff-item[data-rank="Kıdemli Moderatör"] { border-left-color: #2ed573; }
-.staff-item[data-rank="Kıdemli Moderatör"] .staff-rank { color: #2ed573; }
+.staff-item[data-rank="Yetkili Sorumlusu"] {
+  border-left-color: #ff6348;
+}
 
-.staff-item[data-rank="Moderatör"] { border-left-color: #5f27cd; }
-.staff-item[data-rank="Moderatör"] .staff-rank { color: #5f27cd; }
+.staff-item[data-rank="Yetkili Sorumlusu"] .staff-rank {
+  color: #ff6348;
+}
+
+.staff-item[data-rank="Admin"] {
+  border-left-color: #1e90ff;
+}
+
+.staff-item[data-rank="Admin"] .staff-rank {
+  color: #1e90ff;
+}
+
+.staff-item[data-rank="Kıdemli Moderatör"] {
+  border-left-color: #2ed573;
+}
+
+.staff-item[data-rank="Kıdemli Moderatör"] .staff-rank {
+  color: #2ed573;
+}
+
+.staff-item[data-rank="Moderatör"] {
+  border-left-color: #5f27cd;
+}
+
+.staff-item[data-rank="Moderatör"] .staff-rank {
+  color: #5f27cd;
+}
 
 /* Slideshow katmanları - JS ile dinamik oluşturulur */
 .bg-slide {
@@ -170,7 +221,10 @@ h1 {
   transition: opacity 1s ease-in-out;
   z-index: -2;
 }
-.bg-slide.active { opacity: 1; }
+
+.bg-slide.active {
+  opacity: 1;
+}
 
 .overhaul {
   z-index: -1;
@@ -180,6 +234,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.4);
   transition-duration: 1s;
 }
+
 .title {
   text-align: left;
   top: 80px;
@@ -189,8 +244,17 @@ h1 {
   position: fixed;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
-h2 {font-size:1.5em;color:rgb(250,250,250);margin:0;}
-h1 {margin-top:10px;}
+
+h2 {
+  font-size: 1.5em;
+  color: rgb(250, 250, 250);
+  margin: 0;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
 .under-nav {
   left: 0;
   bottom: 0;
@@ -199,6 +263,7 @@ h1 {margin-top:10px;}
   height: 3%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .loading-box {
   right: 0;
   bottom: 0;
@@ -206,4 +271,21 @@ h1 {margin-top:10px;}
   width: 30%;
   height: 15%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#music-control {
+  font-family: "Ubuntu Mono", "Arial";
+  font-size: 1.1em;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  transition: all 0.3s;
+  user-select: none;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+#music-control:hover {
+  color: #6da9ff;
 }

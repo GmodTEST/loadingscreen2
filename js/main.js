@@ -213,6 +213,19 @@ function loadMusic() {
   audio.volume = Config.musicVolume || 0.2;
   audio.loop = true;
 
+  // Spacebar to toggle music
+  $(document).on('keydown', function (e) {
+    if (e.code === 'Space' || e.keyCode === 32) {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  });
+
+
+
   // Browsers usually block autoplay. We try to play, and if it fails, we wait for a click.
   var playPromise = audio.play();
 

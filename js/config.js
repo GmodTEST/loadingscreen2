@@ -58,13 +58,13 @@ Config.announcementLength = 3000;
  * Görseller buraya eklenen sırayla döner.
  */
 Config.backgrounds = [
-  // "legacyyilbasi.png",
-  //  "legacyyilbasi2.png",
-
-  "default1.jpg",
-  "default4.jpg",
-  "default2.jpg",
-  "default3.jpg"
+// "legacyyilbasi.png",
+//  "legacyyilbasi2.png",
+  
+"default1.jpg",
+"default4.jpg",
+"default2.jpg",
+"default3.jpg"
 ];
 // Kaç saniyede bir arka plan değişsin?
 Config.backgroundInterval = 5; // saniye
@@ -74,25 +74,25 @@ Config.backgroundInterval = 5; // saniye
  * Sağ tarafta gösterilecek yetkili listesi
  */
 Config.staff = [
-  { rank: "LEGACY", name: "Kly" },
-  { rank: "LEGACY", name: "Valeri" },
-  { rank: "LEGACY", name: "Goktug" },
-  { rank: "LEGACY", name: "Muzisyenes" },
-  { rank: "Sunucu Yönetimi", name: "Aren" },
-  { rank: "Sunucu Yönetimi", name: "wAve" },
-  { rank: "Yetkili Sorumlusu", name: "codibaba1numara" },
-  { rank: "Admin", name: "InFlames" },
-  { rank: "Admin", name: "Keegan" },
-  { rank: "Admin", name: "pirasa" },
-  { rank: "Admin", name: "Orpheus" },
-  { rank: "Kıdemli Moderatör", name: "Raft" },
-  { rank: "Kıdemli Moderatör", name: "Integra" },
-  { rank: "Kıdemli Moderatör", name: "4pollon" },
-  { rank: "Kıdemli Moderatör", name: "Eekmek" },
-  { rank: "Moderatör", name: "Starspro" },
-  { rank: "Moderatör", name: "Grodde" },
-  { rank: "Moderatör", name: "MLHC" },
-  { rank: "Moderatör", name: "Ayes" }
+ { rank: "LEGACY", name: "Kly" },
+ { rank: "LEGACY", name: "Valeri" },
+ { rank: "LEGACY", name: "Goktug" },
+ { rank: "LEGACY", name: "Muzisyenes" },
+ { rank: "Sunucu Yönetimi", name: "Aren" },
+ { rank: "Sunucu Yönetimi", name: "wAve" },
+ { rank: "Yetkili Sorumlusu", name: "codibaba1numara" },
+ { rank: "Admin", name: "InFlames" },
+ { rank: "Admin", name: "Keegan" },
+ { rank: "Admin", name: "pirasa" },
+ { rank: "Admin", name: "Orpheus" },
+ { rank: "Kıdemli Moderatör", name: "Raft" },
+ { rank: "Kıdemli Moderatör", name: "Integra" },
+ { rank: "Kıdemli Moderatör", name: "4pollon" },
+ { rank: "Kıdemli Moderatör", name: "Eekmek" },
+ { rank: "Moderatör", name: "Starspro" },
+ { rank: "Moderatör", name: "Grodde" },
+ { rank: "Moderatör", name: "MLHC" },
+ { rank: "Moderatör", name: "Ayes" }
 ];
 
 /**
@@ -135,21 +135,6 @@ Config.tips = [
   "İlk defa cisimlenen kişiler kısa süreli mide bulantısı ve baş dönmesi yaşayabilir.",
   "Büyülü gizemlerin peşine düşenler ya tarihe kazınır ya da tamamen kaybolur."
 ];
-
-/**
- * Background Music
- * Media klasörüne attığınız müzik dosyalarının adlarını buraya yazın.
- * Örnek: ["music1.ogg", "music2.mp3"]
- */
-Config.musicPlaylist = [
-  "sarki.ogg"
-];
-
-/**
- * Music Volume
- * Müzik ses seviyesi (0.0 ile 1.0 arası)
- */
-Config.musicVolume = 0.05;
 
 
 /**

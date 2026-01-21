@@ -213,21 +213,6 @@ function loadMusic() {
   audio.volume = Config.musicVolume || 0.2;
   audio.loop = true;
 
-  // Pause music when Alt-Tabbed (Safe way to mute)
-  window.addEventListener('blur', function () {
-    if (!audio.paused) {
-      audio.pause();
-    }
-  });
-
-  window.addEventListener('focus', function () {
-    if (audio.paused) {
-      audio.play();
-    }
-  });
-
-
-
   // Browsers usually block autoplay. We try to play, and if it fails, we wait for a click.
   var playPromise = audio.play();
 

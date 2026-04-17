@@ -58,12 +58,10 @@ Config.announcementLength = 3000;
  * Görseller buraya eklenen sırayla döner.
  */
 Config.backgrounds = [
-/**
   "default1.jpg",
   "default4.jpg",
   "default2.jpg",
   "default3.jpg"
-   */
 ];
 // Kaç saniyede bir arka plan değişsin?
 Config.backgroundInterval = 5; // saniye

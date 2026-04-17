@@ -58,9 +58,6 @@ Config.announcementLength = 3000;
  * Görseller buraya eklenen sırayla döner.
  */
 Config.backgrounds = [
-  // "legacyyilbasi.png",
-  //  "legacyyilbasi2.png",
-
   "default1.jpg",
   "default4.jpg",
   "default2.jpg",

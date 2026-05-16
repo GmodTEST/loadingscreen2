@@ -83,11 +83,11 @@ Config.staff = [
   { rank: "Admin", name: "pirasa" },
   { rank: "Admin", name: "Orpheus" },
   { rank: "Admin", name: "4pollon" },
-  { rank: "Kıdemli Moderatör", name: "Raft" },
   { rank: "Kıdemli Moderatör", name: "Integra" },
   { rank: "Kıdemli Moderatör", name: "Eekmek" },
   { rank: "Moderatör", name: "Starspro" },
   { rank: "Moderatör", name: "Grodde" },
+  { rank: "Moderatör", name: "Ayes" },
   { rank: "Moderatör", name: "MLHC" },
   { rank: "Rehber", name: ".maviii" },
   { rank: "Rehber", name: "ibowiee" }

@@ -90,7 +90,8 @@ Config.staff = [
   { rank: "Moderatör", name: "Ayes" },
   { rank: "Moderatör", name: "MLHC" },
   { rank: "Rehber", name: ".maviii" },
-  { rank: "Rehber", name: "ibowiee" }
+  { rank: "Rehber", name: "ibowiee" },
+  { rank: "Rehber", name: "falsevia" }
 ];
 
 /**

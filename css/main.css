@@ -117,18 +117,32 @@ h1 {
 
 #staff-panel {
   position: fixed;
-  top: 55px;
-  right: 12px;
+  top: 35px;
+  right: 1px;
   background: rgba(0, 0, 0, 0.7);
   padding: 8px;
   border-radius: 5px;
-  width: 170px;
+  width: 165px; /* Genişlik biraz artırıldı */
+  max-height: 90vh; /* Yükseklik limiti biraz artırıldı (ekranın %90'ı) */
+  overflow-y: auto; /* Siyah kutudan taşmayı engellemek için kaydırma çubuğu kalmalı */
   z-index: 10;
 }
 
+/* Şeffaf arka plana uygun ince kaydırma çubuğu */
+#staff-panel::-webkit-scrollbar {
+  width: 4px;
+}
+#staff-panel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+#staff-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
 #staff-panel h3 {
-  margin: 0 0 6px 0;
-  font-size: 0.95em;
+  margin: 0 0 8px 0; /* Alt boşluk artırıldı */
+  font-size: 0.9em; /* Başlık boyutu büyütüldü */
   color: #fff;
   text-align: center;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
@@ -136,7 +150,7 @@ h1 {
 }
 
 .staff-item {
-  margin: 3px 0;
+  margin: 3px 0; /* Öğeler arası boşluk biraz artırıldı */
   padding: 3px 5px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 3px;
@@ -144,15 +158,15 @@ h1 {
 }
 
 .staff-rank {
-  font-size: 0.9em;
+  font-size: 0.82em; /* Rank boyutu büyütüldü */
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
   line-height: 1.1;
 }
 
 .staff-name {
-  font-size: 0.95em;
+  font-size: 0.97em; /* İsim boyutu büyütüldü */
   color: #fff;
   margin-top: 1px;
   line-height: 1.1;
@@ -165,6 +179,14 @@ h1 {
 
 .staff-item[data-rank="LEGACY"] .staff-rank {
   color: #ff4757;
+}
+
+.staff-item[data-rank="Yönetim Lideri"] {
+  border-left-color: #42c720;
+}
+
+.staff-item[data-rank="Yönetim Lideri"] .staff-rank {
+  color: #42c720;
 }
 
 .staff-item[data-rank="Sunucu Yönetimi"] {
@@ -276,7 +298,7 @@ h1 {
   right: 0;
   bottom: 0;
   position: absolute;
-  width: 30%;
-  height: 9%;
+  width: 22%;
+  height: 8.2%;
   background-color: rgba(0, 0, 0, 0.5);
 }
